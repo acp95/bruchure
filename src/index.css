@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-cyan: #4F46E5;
+  --color-brand-black: #F8FAFC;
+  --color-brand-dark: #FFFFFF;
+  --color-brand-border: #E2E8F0;
+}
+
+@layer utilities {
+  .light-gradient-bg {
+    background: radial-gradient(circle at 10% 20%, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%);
+  }
+  
+  /* Modern Web design layouts */
+  .grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+  }
+
+  .grid-pattern-dense {
+    background-size: 20px 20px;
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  }
+
+  /* Sleek modern glass card panel */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  /* Premium luminous borders and glowing effects */
+  .glow-indigo {
+    box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.15), 0 0 15px -5px rgba(99, 102, 241, 0.08);
+  }
+
+  .glow-active {
+    box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.3), 0 0 20px -5px rgba(99, 102, 241, 0.15);
+  }
+
+  /* Custom corner widgets representing architectural accuracy */
+  .corner-decor-tl::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #4F46E5;
+    border-left: 2px solid #4F46E5;
+    z-index: 10;
+  }
+
+  .corner-decor-tr::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #4F46E5;
+    border-right: 2px solid #4F46E5;
+    z-index: 10;
+  }
+
+  .corner-decor-bl::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #4F46E5;
+    border-left: 2px solid #4F46E5;
+    z-index: 10;
+  }
+
+  .corner-decor-br::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #4F46E5;
+    border-right: 2px solid #4F46E5;
+    z-index: 10;
+  }
+}
+
+/* Beautiful custom fine lines scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
