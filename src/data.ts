@@ -84,3 +84,81 @@ export const projectDiagnostics = [
     benefits: ["Auditoría continua de procesos", "Decisiones guiadas por analítica", "Escalabilidad de bases de datos"]
   }
 ];
+
+export const projectsData: import('./types').Project[] = [
+  {
+    id: "mercados",
+    title: "Sistema de Gestión de Mercados",
+    client: "Gobiernos Locales / Privados",
+    description: "Plataforma integral para la administración financiera, control de puestos, recaudación de arbitrios/pagos y gestión de comerciantes. Permite digitalizar y transparentar el control de los mercados municipales o privados.",
+    features: [
+      "Control de padrón de comerciantes y puestos",
+      "Emisión y seguimiento de recibos de pago",
+      "Reportes de recaudación en tiempo real",
+      "Gestión de deudas y notificaciones"
+    ],
+    techStack: ["React", "Node.js", "PostgreSQL", "Docker"],
+    imagePlaceholder: "bg-blue-600",
+    colorAccents: "text-blue-600 bg-blue-50 border-blue-200"
+  },
+  {
+    id: "cementerios",
+    title: "Sistema Integrado de Cementerios",
+    client: "Beneficencias y Municipios",
+    description: "Software especializado en la gestión de sepelios, ubicación de nichos, control de pagos por mantenimiento y emisión de constancias. Moderniza el registro histórico y facilita la búsqueda para los ciudadanos.",
+    features: [
+      "Mapa interactivo o registro de pabellones",
+      "Historial clínico/actas de defunción",
+      "Facturación y control de servicios funerarios",
+      "Búsqueda rápida de difuntos"
+    ],
+    techStack: ["Angular", "PHP", "MySQL", "TailwindCSS"],
+    imagePlaceholder: "bg-indigo-700",
+    colorAccents: "text-indigo-700 bg-indigo-50 border-indigo-200"
+  },
+  {
+    id: "citas_medicas",
+    title: "Sistema de Citas Médicas y Clínicas",
+    client: "Centros de Salud y Consultorios",
+    description: "Plataforma para la gestión integral de historias clínicas, programación de citas, telemedicina y control de farmacia. Optimiza el tiempo de atención y mejora la experiencia del paciente.",
+    features: [
+      "Agenda médica interactiva por especialidad",
+      "Historia clínica electrónica (HCE) estandarizada",
+      "Recordatorios automáticos vía WhatsApp/Email",
+      "Módulo de facturación y recetas médicas"
+    ],
+    techStack: ["React", "Node.js", "MongoDB", "WebRTC"],
+    imagePlaceholder: "bg-teal-600",
+    colorAccents: "text-teal-700 bg-teal-50 border-teal-200"
+  },
+  {
+    id: "transporte",
+    title: "Sistema de Gestión de Transporte",
+    client: "Empresas de Logística y Transporte",
+    description: "Software diseñado para el control de flotas, seguimiento de rutas, gestión de encomiendas y venta de pasajes. Permite tener trazabilidad completa de las operaciones logísticas y financieras.",
+    features: [
+      "Venta de pasajes con selección de asientos",
+      "Seguimiento GPS y control de rutas/manifiestos",
+      "Gestión de encomiendas y paquetería",
+      "Mantenimiento vehicular y control de combustible"
+    ],
+    techStack: ["Vue.js", "Laravel", "PostgreSQL", "Google Maps API"],
+    imagePlaceholder: "bg-amber-600",
+    colorAccents: "text-amber-700 bg-amber-50 border-amber-200"
+  },
+  {
+    id: "otros",
+    title: "Desarrollo a Medida",
+    client: "Empresas en General",
+    description: "Sistemas adaptados a las reglas de negocio específicas de tu organización, asegurando alta disponibilidad, seguridad y una experiencia de usuario moderna e intuitiva.",
+    features: [
+      "Arquitecturas escalables y seguras",
+      "Integración con APIs de terceros (Facturación, Reniec)",
+      "Análisis de datos y Dashboards gerenciales",
+      "Soporte continuo y mantenimiento"
+    ],
+    techStack: ["Python", "AWS", "Docker", "TypeScript"],
+    imagePlaceholder: "bg-slate-800",
+    colorAccents: "text-slate-800 bg-slate-100 border-slate-300"
+  }
+];

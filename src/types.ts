@@ -25,3 +25,14 @@ export interface ContactMessage {
   message: string;
   createdAt: string;
 }
+
+export interface Project {
+  id: string;
+  title: string;
+  client?: string;
+  description: string;
+  features: string[];
+  techStack: string[];
+  imagePlaceholder: string;
+  colorAccents: string;
+}
