@@ -177,13 +177,13 @@ export default function HeroSection() {
                 <div className="space-y-1">
                   <p className="text-slate-400 text-[10px]">// perfil_profesional_ejecutivo</p>
                   <p className="text-slate-700">
-                    $ <span className="text-indigo-600 font-bold">cat</span> academic_focus.json
+                    $ <span className="text-indigo-600 font-bold">cat</span> profile_summary.json
                   </p>
                   <div className="bg-slate-50 p-3.5 border border-slate-200 text-[11px] leading-relaxed text-slate-650 hover:bg-indigo-50/10 transition-colors duration-200">
                     <span className="text-indigo-600 font-bold">{"{"}</span> <br />
                     &nbsp;&nbsp;&quot;título&quot;: &quot;Ingeniero en Informática (CIP: 326474)&quot;,<br />
                     &nbsp;&nbsp;&quot;postgrado&quot;: &quot;Egresado de Maestría en Ciencias de la Computación&quot;,<br />
-                    &nbsp;&nbsp;&quot;tesis_investigación&quot;: &quot;Algoritmos Genéticos de Optimización&quot;,<br />
+                    &nbsp;&nbsp;&quot;enfoque&quot;: &quot;Desarrollo Enterprise, Cloud &amp; Networking&quot;,<br />
                     &nbsp;&nbsp;&quot;especialidades&quot;: [&quot;Sistemas de Gestión Web&quot;, &quot;Ciencia de Datos&quot;, &quot;Arquitectura TI&quot;]<br />
                     <span className="text-indigo-600 font-bold">{"}"}</span>
                   </div>
@@ -203,21 +203,21 @@ export default function HeroSection() {
                 </div>
 
                 <div className="space-y-1">
-                  <p className="text-slate-400 text-[10px]">// modelando_optimizador_genetico</p>
+                  <p className="text-slate-400 text-[10px]">// monitoreo_de_servidores_docker</p>
                   <div className="bg-slate-50 p-3.5 border border-slate-200 text-slate-600 flex flex-col space-y-2.5">
                     <div className="flex justify-between text-[10px] font-bold">
-                      <span className="text-slate-700 uppercase">GENERACIÓN ACTIVA: #840</span>
-                      <span className="text-indigo-600 uppercase font-black">MUTACIÓN: 2.4%</span>
+                      <span className="text-slate-700 uppercase">UPTIME GENERAL: 99.98%</span>
+                      <span className="text-indigo-600 uppercase font-black">CARGA CPU: 12%</span>
                     </div>
                     {/* Glowing progress line */}
                     <div className="space-y-1">
                       <div className="w-full h-2 bg-slate-200 rounded-none overflow-hidden">
-                        <div className="w-[88%] h-full bg-indigo-600" />
+                        <div className="w-[12%] h-full bg-emerald-500" />
                       </div>
                     </div>
                     <div className="flex justify-between text-[9px] text-slate-450 font-bold font-mono">
-                      <span>CONVERGENCIA: 99.4%</span>
-                      <span>SAMPLES: 3.2K/S</span>
+                      <span>SERVIDORES ACTIVOS: 4/4</span>
+                      <span>MEMORIA: 3.1 GB / 8.0 GB</span>
                     </div>
                   </div>
                 </div>

@@ -34,7 +34,7 @@ export default function Footer() {
 
             <div className="flex space-x-4">
               <span className="text-slate-400 block hover:text-slate-900 transition-colors duration-150">
-                Egresado de Maestría en CS // Algoritmos Genéticos (Investigación)
+                Egresado de Maestría en Ciencias de la Computación
               </span>
             </div>
 
@@ -46,9 +46,9 @@ export default function Footer() {
         <div className="border-t border-slate-200 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-slate-400 gap-4">
           <p>© {currentYear} Porfirio Antonio Cerna Perez. Todos los derechos reservados.</p>
           <div className="flex space-x-3 uppercase tracking-wider text-slate-400 font-semibold">
-            <span>Rigor Científico Aplicado</span>
+            <span>Ingeniería de Software</span>
             <span>•</span>
-            <span>Optimización Heurística</span>
+            <span>Alta Disponibilidad</span>
             <span>•</span>
             <span>Conectividad Ubiquiti</span>
           </div>

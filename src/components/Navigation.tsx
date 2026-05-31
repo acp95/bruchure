@@ -29,8 +29,8 @@ export default function Navigation() {
   const menuItems = [
     { label: "Servicios", href: "#servicios" },
     { label: "Propuesta de Valor", href: "#propuesta" },
-    { label: "Simulación IA", href: "#simulacion" },
-    { label: "Diagnóstico", href: "#diagnostico" },
+    { label: "Casos de Éxito", href: "#soluciones" },
+    { label: "Contáctanos", href: "#contacto" },
   ];
 
   const scrollToSection = (id: string) => {

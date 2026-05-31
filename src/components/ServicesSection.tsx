@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { 
-  FileText, Code, Shield, Check, Cpu, Server, Lock, Landmark, ArrowUpRight,
-  Database, Coffee, Layers, Globe, Terminal, Radio, Activity, GitBranch,
-  Atom, Hexagon, Boxes
+  Check, Cpu, Server, Lock, Landmark, ArrowUpRight,
+  Database, Activity, GitBranch, Code
 } from "lucide-react";
+import {
+  SiReact, SiAngular, SiPhp,
+  SiNodedotjs, SiPostgresql, SiMysql, SiDocker,
+  SiPython, SiD3, SiGooglecloud,
+  SiUbiquiti, SiLinux
+} from "react-icons/si";
+import { FaJava, FaAws } from "react-icons/fa";
 import { servicesData } from "../data";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -25,114 +31,74 @@ export default function ServicesSection() {
 
   const getTechIcon = (techName: string) => {
     const norm = techName.toLowerCase();
+    const sz = "w-3.5 h-3.5";
     
-    if (norm.includes("react")) {
+    if (norm.includes("react") || norm.includes("typescript")) {
       return (
         <span className="flex items-center gap-1">
-          <Atom className="w-3.5 h-3.5 text-cyan-500 animate-[spin_10s_linear_infinite]" />
+          <SiReact className={`${sz} text-[#61DAFB]`} />
         </span>
       );
     }
     if (norm.includes("angular")) {
-      return <Shield className="w-3.5 h-3.5 text-red-600 fill-red-100/50" />;
+      return <SiAngular className={`${sz} text-[#DD0031]`} />;
     }
     if (norm.includes("php")) {
-      return <Globe className="w-3.5 h-3.5 text-indigo-400" />;
+      return <SiPhp className={`${sz} text-[#777BB4]`} />;
     }
     if (norm.includes("node")) {
-      return <Hexagon className="w-3.5 h-3.5 text-green-600 fill-green-100/30" />;
+      return <SiNodedotjs className={`${sz} text-[#339933]`} />;
     }
-    if (norm.includes("java")) {
-      return <Coffee className="w-3.5 h-3.5 text-amber-600" />;
+    if (norm.includes("java") && !norm.includes("javascript")) {
+      return <FaJava className={`${sz} text-[#ED8B00]`} />;
     }
     if (norm.includes("postgres")) {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="w-3.5 h-3.5 text-[#336791] fill-[#336791]/10"
-        >
-          {/* Elephant Head Concept */}
-          <path d="M8 5C5 5 2.5 7.5 2.5 11c0 3 2 4.5 4.5 5" />
-          <path d="M16 5c3 0 5.5 2.5 5.5 6s-2 4.5-5.5 5" />
-          <path d="M7.5 6.5C7.5 4.5 9.5 3 12 3s4.5 1.5 4.5 3.5v5c0 1-.5 2-1 2.5" />
-          <path d="M11 11v5c0 2 1 3.5 2.5 3.5s2-1 2-2" />
-          <path d="M7 11.5h1.5M15.5 11.5H17" />
-        </svg>
-      );
+      return <SiPostgresql className={`${sz} text-[#4169E1]`} />;
     }
     if (norm.includes("mysql")) {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="w-3.5 h-3.5 text-[#00758f] fill-[#00758f]/10"
-        >
-          {/* Dolphin Concept */}
-          <path d="M2 15c4-1 8-5 11-9 1-1.3 3-1.8 4.5-.8 1 .7 1.5 1.8 1.5 3s-.7 2-1.5 2.5c-3 .5-6 2-8 4-2 2-5 3.5-7.5 3.5C2 18 1.5 16.5 2 15z" />
-          <path d="M12.5 7.5c1-2.5 2.5-3.5 3-3.5.2 0-.2 2.2-1 3.5" />
-          <path d="M1 16.5c-1-1.5.5-3 1.5-2.5" />
-        </svg>
-      );
+      return <SiMysql className={`${sz} text-[#4479A1]`} />;
     }
-    if (norm.includes("sql") || norm.includes("database")) {
-      return <Database className="w-3.5 h-3.5 text-indigo-500" />;
+    if (norm.includes("sql") || norm.includes("database") || norm.includes("nosql")) {
+      return <Database className={`${sz} text-indigo-500`} />;
     }
-    if (norm.includes("docker")) {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="w-3.5 h-3.5 text-[#0db7ed] fill-[#0db7ed]/10"
-        >
-          {/* Whale (Ballenita) Concept carrying cargo */}
-          <path d="M2 13.5c0-1.5 1.2-2.5 2.5-3 .8-.3 1.8-.5 2.8-.5 2 0 3.8.8 5.7 1.5 2 .8 4 1 5.5-.3.8-.7.8-2 1.5-2.5.5-.3 1.5 0 1.5 1.5s-1.2 3.5-2.5 4c-3.2 1.2-7.5.8-11-.5-2.5-.9-5.5-.2-6-1.5z" />
-          <path d="M6 7h2v2H6V7zM9 7h2v2H9V7zM12 7h2v2h-2V7z" fill="currentColor" strokeWidth="0" />
-          <path d="M7.5 4h2v2h-2V4zM10.5 4h2v2h-2V4z" fill="currentColor" strokeWidth="0" />
-        </svg>
-      );
+    if (norm.includes("docker") || norm.includes("container")) {
+      return <SiDocker className={`${sz} text-[#2496ED]`} />;
     }
     if (norm.includes("api") || norm.includes("rest")) {
-      return <GitBranch className="w-3.5 h-3.5 text-orange-500" />;
+      return <GitBranch className={`${sz} text-orange-500`} />;
     }
     if (norm.includes("workflow") || norm.includes("automation")) {
-      return <Activity className="w-3.5 h-3.5 text-indigo-600 animate-pulse" />;
+      return <Activity className={`${sz} text-indigo-600 animate-pulse`} />;
     }
     if (norm.includes("python") || norm.includes("pandas")) {
-      return <Terminal className="w-3.5 h-3.5 text-blue-500" />;
+      return <SiPython className={`${sz} text-[#3776AB]`} />;
     }
     if (norm.includes("d3") || norm.includes("recharts")) {
-      return <Activity className="w-3.5 h-3.5 text-rose-500" />;
+      return <SiD3 className={`${sz} text-[#F9A03C]`} />;
     }
-    if (norm.includes("cloud") || norm.includes("aws") || norm.includes("gcp") || norm.includes("deployment")) {
-      return <Server className="w-3.5 h-3.5 text-emerald-600" />;
+    if (norm.includes("aws")) {
+      return <FaAws className={`${sz} text-[#232F3E]`} />;
+    }
+    if (norm.includes("gcp") || norm.includes("google")) {
+      return <SiGooglecloud className={`${sz} text-[#4285F4]`} />;
+    }
+    if (norm.includes("cloud") || norm.includes("deployment")) {
+      return <Server className={`${sz} text-emerald-600`} />;
     }
     if (norm.includes("ubiquiti") || norm.includes("unifi")) {
-      return <Radio className="w-3.5 h-3.5 text-blue-600" />;
+      return <SiUbiquiti className={`${sz} text-[#0559C9]`} />;
     }
-    if (norm.includes("genetic") || norm.includes("algorithm")) {
-      return <Cpu className="w-3.5 h-3.5 text-teal-600 animate-pulse" />;
-    }
-    if (norm.includes("debian") || norm.includes("server") || norm.includes("ubuntu")) {
-      return <Terminal className="w-3.5 h-3.5 text-rose-600 font-bold" />;
+    if (norm.includes("debian") || norm.includes("ubuntu") || norm.includes("linux") || norm.includes("server")) {
+      return <SiLinux className={`${sz} text-[#FCC624]`} />;
     }
     if (norm.includes("vpn") || norm.includes("ipsec") || norm.includes("firewall")) {
-      return <Lock className="w-3.5 h-3.5 text-emerald-500" />;
+      return <Lock className={`${sz} text-emerald-500`} />;
+    }
+    if (norm.includes("network")) {
+      return <Activity className={`${sz} text-blue-500`} />;
     }
 
-    return <Code className="w-3.5 h-3.5 text-indigo-600" />;
+    return <Code className={`${sz} text-indigo-600`} />;
   };
 
   const currentPillar = servicesData.find((p) => p.id === selectedPillar) || servicesData[0];

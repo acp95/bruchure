@@ -324,64 +324,7 @@ export default function ContactCTA() {
 
         </div>
 
-        {/* PERSISTENT LOCAL DATA MONITOR (PERSISTENCE DEMO) */}
-        {savedMessages.length > 0 && (
-          <div className="mt-14 bg-white border border-slate-200 rounded-none overflow-hidden shadow-2xl glow-indigo">
-            <button
-              onClick={() => setShowLogsPanel(!showLogsPanel)}
-              className="w-full px-6 py-4.5 flex justify-between items-center text-left bg-slate-50 hover:bg-slate-100 cursor-pointer transition-colors duration-200"
-            >
-              <div className="flex items-center space-x-3">
-                <Database className="w-4 h-4 text-indigo-600" />
-                <span className="text-xs text-slate-700 uppercase font-mono tracking-widest font-black">
-                  Registros del Servidor Local ({savedMessages.length})
-                </span>
-                <span className="bg-indigo-50 border border-indigo-150 text-indigo-650 font-mono text-[9px] py-1 px-3 rounded-none font-black tracking-widest">
-                  PERSISTENCE: COMPLIANT
-                </span>
-              </div>
-              <div>
-                {showLogsPanel ? <ChevronUp className="w-4.5 h-4.5 text-slate-500" /> : <ChevronDown className="w-4.5 h-4.5 text-slate-500" />}
-              </div>
-            </button>
 
-            <AnimatePresence>
-              {showLogsPanel && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="border-t border-slate-200 font-mono text-[10px] divide-y divide-slate-150"
-                >
-                  <div className="p-6 overflow-x-auto max-h-76 overflow-y-auto space-y-4.5 bg-slate-50/50">
-                    {savedMessages.map((msg) => (
-                      <div key={msg.id} className="bg-white p-4 rounded-none border border-slate-200 space-y-2.5 relative shadow-3xs">
-                        <div className="flex justify-between text-indigo-600 font-black text-[9px]">
-                          <span>ID: {msg.id} ({msg.createdAt})</span>
-                          <span className="text-indigo-650 uppercase tracking-widest">Pilar: {msg.serviceInterest.toUpperCase()}</span>
-                        </div>
-                        <div className="space-y-1.5 text-slate-650 font-bold">
-                          <p><span className="text-slate-400 font-black uppercase text-[8px] tracking-wider block sm:inline mr-2">Nombre:</span> {msg.name}</p>
-                          <p><span className="text-slate-400 font-black uppercase text-[8px] tracking-wider block sm:inline mr-2">Email:</span> {msg.email}</p>
-                          {msg.entityName && <p><span className="text-slate-400 font-black uppercase text-[8px] tracking-wider block sm:inline mr-2">Entidad:</span> {msg.entityName}</p>}
-                          <p><span className="text-slate-400 font-black uppercase text-[8px] tracking-wider block lg:block mb-1">Mensaje:</span> <span className="text-slate-800 font-medium font-sans text-xs leading-relaxed block bg-slate-50 p-3.5 border border-slate-150">{msg.message}</span></p>
-                        </div>
-                      </div>
-                    ))}
-                    <div className="flex justify-end pt-3">
-                      <button
-                        onClick={clearMessagesLog}
-                        className="text-[9px] hover:text-rose-650 text-rose-600 font-black tracking-widest uppercase cursor-pointer select-none border-none bg-transparent"
-                      >
-                        [ Eliminar registros de consulta ]
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        )}
 
       </div>
     </section>

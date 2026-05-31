@@ -74,8 +74,9 @@ export default function ProjectsSection() {
                 <div className="w-full lg:w-1/2">
                   <div className="space-y-6">
                     <div>
-                      <div className={`inline-flex px-3 py-1 rounded-full text-xs font-semibold mb-4 border ${project.colorAccents}`}>
-                        {project.client}
+                      <div className={`inline-flex px-3 py-1 rounded-full text-xs font-semibold mb-4 border items-center gap-1.5 ${project.colorAccents}`}>
+                        <span className="font-mono text-[9px] uppercase tracking-wider opacity-60">Público Objetivo:</span>
+                        <span>{project.client}</span>
                       </div>
                       <h4 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
                         {project.title}

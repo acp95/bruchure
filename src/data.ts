@@ -25,7 +25,7 @@ export const servicesData: ServicePillar[] = [
       "Modelado estadístico y predictivo diseñado para optimizar el rendimiento y detectar oportunidades clave.",
       "Visualizaciones de datos fluidas e interactivas usando librerías líderes como D3.js y Recharts.",
       "Código fuente limpio, estructurado de manera modular y completamente preparado para escalar a largo plazo.",
-      "Soluciones confiables basadas en metodologías de investigación que garantizan la precisión del procesamiento de datos."
+      "Soluciones confiables y validadas con altos estándares de precisión en el procesamiento y modelado de datos."
     ],
     techStack: ["Python (Pandas/Scikit-Learn)", "React & TypeScript", "D3 / Recharts", "SQL / NoSQL Databases", "Cloud Platforms (AWS/GCP)"],
     targetAudience: "private",
@@ -50,19 +50,19 @@ export const servicesData: ServicePillar[] = [
 
 export const valueProps = [
   {
-    title: "Fundamentos Científicos Sólidos",
-    description: "Abordamos la ingeniería de software como una ciencia exacta, no como un proceso de improvisación. Gracias a una formación focalizada sobre ciencias de la computación avanzadas, estructuramos sistemas bajo estándares y metodologías de investigación internacionales.",
-    scientificRigor: "No dejamos el rendimiento al azar. Cada base de datos, componente o modelo predictivo se somete a evaluaciones algorítmicas de eficiencia temporal y espacial, asegurando un funcionamiento rápido ante escenarios reales de alta concurrencia tecnológica."
+    title: "Alta Ingeniería & Maestría en CS",
+    description: "Diseñamos sistemas de software robustos bajo estándares de nivel enterprise. Gracias a una formación avanzada con estudios de Maestría en Ciencias de la Computación, estructuramos arquitecturas altamente eficientes, seguras y preparadas para la escalabilidad.",
+    scientificRigor: "No dejamos el rendimiento al azar. Cada base de datos y componente se somete a rigurosas evaluaciones de eficiencia de carga y rendimiento, asegurando un funcionamiento veloz ante escenarios reales de alta demanda tecnológica."
   },
   {
-    title: "Optimización Inteligente por Algoritmos",
-    description: "A través de nuestra línea de investigación orientada al desarrollo de algoritmos de optimización (incluyendo Computación Evolutiva y Algoritmos Genéticos), resolvemos problemas logísticos, de distribución de recursos y asignación de tareas con alta eficiencia computacional.",
-    scientificRigor: "Diseñamos y simulamos modelos que permiten hallar alternativas óptimas ante rutas de transporte complejas, programaciones de horarios u otras necesidades empresariales críticas donde los métodos ordinarios de programación demorarían horas en hallar soluciones."
+    title: "Optimización & Automatización Logística",
+    description: "Desarrollamos algoritmos a la medida y workflows de automatización para resolver de forma inteligente problemas de distribución de recursos, control de flotas logísticas y asignación de tareas críticas.",
+    scientificRigor: "Diseñamos modelos automatizados que permiten hallar soluciones eficientes ante rutas de transporte complejas y programaciones de horarios exigentes, reduciendo tiempos de procesamiento y costos operativos en tu organización."
   },
   {
-    title: "Calidad de Entregables y Transparencia Gremial",
-    description: "Creemos firmemente en soluciones informáticas claras, libres de dependencias y de propiedad directa del cliente. Entregamos arquitecturas de software legibles, modulares, debidamente certificadas y acompañadas por el respaldo ético que distingue a un Ingeniero de Sistemas e Informática Colegiado.",
-    scientificRigor: "Diseñamos separando responsabilidades lógicas e implementando patrones de código sencillos de auditar, lo cual minimiza los costos de soporte preventivo y facilita la evolución del sistema a manos de cualquier equipo técnico."
+    title: "Código Limpio y Propiedad del Cliente",
+    description: "Creemos firmemente en soluciones de software transparentes, libres de dependencias y de propiedad directa del cliente. Entregamos arquitecturas modulares y legibles bajo el respaldo de un Ingeniero de Sistemas e Informática Colegiado.",
+    scientificRigor: "Separamos responsabilidades lógicas e implementamos patrones de código sencillos de auditar, lo cual minimiza drásticamente los costos de soporte preventivo y facilita la evolución del sistema a largo plazo."
   }
 ];
 

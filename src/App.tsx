@@ -2,7 +2,6 @@ import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import ValueProposition from "./components/ValueProposition";
-import InteractiveEstimator from "./components/InteractiveEstimator";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactCTA from "./components/ContactCTA";
 import Footer from "./components/Footer";
@@ -15,7 +14,6 @@ export default function App() {
       <ServicesSection />
       <ValueProposition />
       <ProjectsSection />
-      <InteractiveEstimator />
       <ContactCTA />
       <Footer />
     </div>
